@@ -52,7 +52,15 @@ for (let i=0; i<sections.length;i++ )
 
 navbarsections = document.querySelectorAll(".navbarsection");
 
-// Add class 'active' to section when near top of viewport
+
+// This is where I add the listener only to the first section to test.
+sections[0].addEventListener('scroll', function(event) {
+    if(sections[0].getBoundingClientRect().top < 150)
+    {
+        sections[0].classList.add("your-active-class");
+    }
+} );
+
 
 // Scroll to anchor ID using scrollTO event
 
